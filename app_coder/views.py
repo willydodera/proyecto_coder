@@ -3,24 +3,24 @@ from django.shortcuts import render
 from app_coder.models import Curso
 
 # Create your views here.
-def curso(self):
+def curso(request):
     curso = Curso(nombre="Django", comision=93233)
     curso.save()
     texto = f"Curso creado: {curso.nombre} {curso.comision}"
     return HttpResponse(texto)
 
 def inicio(request):
-    return HttpResponse('Vista inicio')
+    return render (request, "app_coder/inicio.html")
 
 def cursos(request):
-    return HttpResponse('Vista cursos')
+     return render (request, "app_coder/cursos.html")
 
 def profesores(request):
-    return HttpResponse('Vista profesores')
+     return render (request, "app_coder/profesores.html")
 
 def entregables(request):
-    return HttpResponse('Vista entregables')
+     return render (request, "app_coder/entregables.html")
 
 def estudiantes(request):
-    return HttpResponse('Vista estudiantes')
+     return render (request, "app_coder/estudiantes.html")
 
