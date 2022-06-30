@@ -8,3 +8,19 @@ def curso(self):
     curso.save()
     texto = f"Curso creado: {curso.nombre} {curso.comision}"
     return HttpResponse(texto)
+
+def inicio(request):
+    return HttpResponse('Vista inicio')
+
+def cursos(request):
+    return HttpResponse('Vista cursos')
+
+def profesores(request):
+    return HttpResponse('Vista profesores')
+
+def entregables(request):
+    return HttpResponse('Vista entregables')
+
+def estudiantes(request):
+    return HttpResponse('Vista estudiantes')
+
