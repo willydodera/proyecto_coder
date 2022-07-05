@@ -5,7 +5,6 @@ from app_coder.models import Curso
 # Create your views here.
 def curso(request):
     curso = Curso(nombre="Django", comision=93233)
-    curso.save()
     texto = f"Curso creado: {curso.nombre} {curso.comision}"
     return HttpResponse(texto)
 
